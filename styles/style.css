@@ -1,0 +1,77 @@
+body{
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E6E4CE;
+}
+
+.container{
+    background-color: #C09BD8;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin: 1em;
+    padding: 1em;
+}
+
+
+h1 {
+
+    font-weight: 700;
+    box-sizing: border-box;
+    font-size: 3em;
+    line-height: 1em;
+    color: #EDE3E9;
+
+}
+
+.container__forms{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+
+}
+
+#mercadoria, #valor, #data{
+    width: 100%;
+}
+
+button{
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+}
+
+button:hover{
+
+    box-shadow: 0 10px 14px 0 rgba(0,0,0,0.1), 0 15px 30px 0 rgba(0,0,0,0.2);
+}
+
+
+label{
+    text-transform: uppercase;
+    color: #EDE3E9;
+}
+
+input{
+    margin-top: 0.7em;
+}
+
+
+table{
+    width: 100%;
+    color: #E6E4CE;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+table, th, td {
+    border: 1px solid #9F84BD;
+    padding: 0.5em;
+}
+
+.delete__button:hover{
+    color: red;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Buyer's List</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Buyer's List</h1>
+        </header>
+
+        <main>
+            <section class="container__forms">
+                <form id="mercadoria">
+                    <label for="text">Mercadoria</label>
+                    <input id="form__mercadoria" type="text">
+                </form>
+
+                <form id="valor">
+                    <label for="number">Valor</label>
+                    <input id="form__valor" type="number">
+    
+                </form>
+
+                <form id="data">
+                    <label for="text">Data</label>
+                    <input id="form__data" type="date">
+                </form>
+
+                <button id="button__add">add</button>
+
+            </section>
+
+            <section class="container__table">
+                <table id="tabela">
+                    <tr>
+                        <th>Item</th>
+                        <th>Valor</th>
+                        <th>Data</th>
+                        <th>Delete</th>
+                    </tr>
+
+                    
+                </table>
+            </section>
+
+        </main>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
