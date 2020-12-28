@@ -1,5 +1,7 @@
 var table = document.getElementById("tabela")
 
+var tableRows = document.getElementsByTagName("tr")
+
 var forms = {
     mercadoria: document.getElementById("form__mercadoria"),
     valor: document.getElementById("form__valor"),
@@ -54,6 +56,42 @@ function deleteRow() {
     var row = (this).closest("tr");
     row.remove()
 }
+
+var saveButton = document.getElementById("save");
+saveButton.addEventListener("click", saveTable)
+
+function saveTable(){
+    
+    var tableRowsInfo = []
+
+    for (var i=1; i < tableRows.length; i++){
+        var tableRowDic = {
+            "item":tableRows[i].childNodes[0].textContent,
+            "valor":tableRows[i].childNodes[1].textContent,
+            "data":tableRows[i].childNodes[2].textContent,
+            "delete":tableRows[i].childNodes[3].textContent
+        }
+        tableRowsInfo.push(tableRowDic)
+    }
+
+    localStorage.setItem("tableRowsInfo", JSON.stringify(tableRowsInfo));
+}
+
+function loadtable(){
+
+    if (localStorage.getItem("tableRowsInfo") != null){
+        var tableRowsInfoLoaded = JSON.parse(localStorage.getItem("tableRowsInfo"))
+
+        for (var i = 0; i < tableRowsInfoLoaded.length; i++){
+            var tableRow = tableRowsInfoLoaded[i] 
+            addToTable(tableRow.item, tableRow.valor, tableRow.data)
+
+        }
+    }
+
+}
+
+loadtable()
 
 
 
